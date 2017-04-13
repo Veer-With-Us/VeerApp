@@ -1,0 +1,78 @@
+<div class="main-container">
+    <header class="header header-6 header-background">
+        <div class="branding">
+        <img src="../../../img/Main-Icon-V1.png" class="logo-spacing" height=70 width=70>
+        </div>
+        <form class="search">
+            <label for="search_input">
+                <input id="search_input" type="text" placeholder="Type here for search">
+            </label>
+        </form>
+    </header>
+    <div class="content-container">
+        <div class="content-area">
+            <!--<veer-social></veer-social>-->
+            <router-outlet></router-outlet>
+        </div>
+        <nav class="sidenav header-background" style="min-width: 40px; max-width: 120px;">
+            <section class="sidenav-content">
+                <a routerLink="home" class="nav-link" style="color: #FFFFFF; padding: 0;">
+                  <div>
+                    <img src="../../../img/noun_428920_cc.svg" height=50 width=50>
+                  </div>
+                    Home
+                </a>
+                <a href="..." class="nav-link" style="color: #FFFFFF; padding: 0;">
+                  <div>
+                    <img src="../../../img/noun_301776_cc.svg" height=50 width=50>
+                  </div>                  
+                    Learn
+                </a>
+                <a href="#" class="nav-link" style="color: #FFFFFF; padding: 0;">
+                  <div>
+                    <img src="../../../img/noun_538260_cc.svg" height=50 width=50>
+                  </div>                  
+                    Sell
+                </a>
+                <a routerLink="/social" class="nav-link" style="color: #FFFFFF; padding: 0;">
+                  <div>
+                    <img src="../../../img/noun_151556.svg" height=50 width=50>
+                  </div>                  
+                    Social
+                </a>
+                <a href="#" class="nav-link" style="color: #FFFFFF; padding: 0;">
+                  <div>
+                    <img src="../../../img/noun_708687_cc.svg" height=50 width=50>
+                  </div>                  
+                    Store
+                </a>
+                <a href="#" class="nav-link" style="color: #FFFFFF; padding: 0;">
+                  <div>
+                    <img src="../../../img/noun_33699_cc.svg" height=50 width=50>
+                  </div>                  
+                    Help
+                </a>
+                <!--<section class="nav-group collapsible">
+                    <input id="tabexample1" type="checkbox">
+                    <label for="tabexample1">Collapsible Nav Element</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link">Link 1</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                    </ul>
+                </section>-->
+                <!--<section class="nav-group">
+                    <input id="tabexample2" type="checkbox">
+                    <label for="tabexample2">Default Nav Element</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link">Link 1</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                        <li><a class="nav-link active">Link 3</a></li>
+                        <li><a class="nav-link">Link 4</a></li>
+                        <li><a class="nav-link">Link 5</a></li>
+                        <li><a class="nav-link">Link 6</a></li>
+                    </ul>
+                </section>-->
+            </section>
+        </nav>
+    </div>
+</div>
