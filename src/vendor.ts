@@ -21,7 +21,8 @@ import 'mutationobserver-shim/dist/mutationobserver.min.js';
 import '@webcomponents/custom-elements/custom-elements.min.js';
 import 'clarity-icons';
 import 'clarity-angular';
-import 'ng2-twitter';
+import 'jssha';
+import 'moment/min/moment.min.js';
 
 // Import css
 

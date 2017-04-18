@@ -12,8 +12,12 @@ import { SocialComponent } from './components/social/social.component';
 import { NewsfeedComponent } from './components/newsfeed/newsfeed.component';
 import { routing } from './app.routing';
 
-import { TwitterService } from './components/social/twitter.service';
 import { NewsApiService } from './components/newsfeed/news-api.service';
+import { ShaService } from './services/sha.service';
+import { OAuthService } from './services/oauth.service';
+import { AuthorizedRequestService } from './services/authorized-request.service';
+import { TwitterService } from './services/twitter.service';
+import { InboxService } from './services/inbox.service';
 
 import { MaxLengthPipe } from './pipes/max-length.pipe';
 
@@ -38,8 +42,12 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     MaxLengthPipe
   ],
   providers: [
+    NewsApiService,
+    ShaService,
+    OAuthService,
+    AuthorizedRequestService,
     TwitterService,
-    NewsApiService
+    InboxService
   ],
   bootstrap: [AppComponent]
 })

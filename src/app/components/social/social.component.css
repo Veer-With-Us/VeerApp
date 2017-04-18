@@ -37,3 +37,19 @@
   display: inline-block;
   color: #FFFFFF;
 }
+
+.right-side-panel {
+  background-color: #2C85A2;
+}
+
+.right-side-header {
+  color: #F5D43F;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.inbox-image {
+  border-radius: 50%;
+  text-align: left;
+}
