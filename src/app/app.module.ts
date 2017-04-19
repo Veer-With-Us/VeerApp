@@ -19,6 +19,7 @@ import { AuthorizedRequestService } from './services/authorized-request.service'
 import { TwitterService } from './services/twitter.service';
 import { InboxService } from './services/inbox.service';
 import { BloombergService } from './services/bloomberg.service';
+import { RedditService } from './services/reddit.service';
 
 import { MaxLengthPipe } from './pipes/max-length.pipe';
 
@@ -49,7 +50,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     AuthorizedRequestService,
     TwitterService,
     InboxService,
-    BloombergService
+    BloombergService,
+    RedditService
   ],
   bootstrap: [AppComponent]
 })

@@ -49,8 +49,15 @@
             <!--<div class="card-text">
               {{ result }}
             </div>-->
-            <div class="card-text">
-              placeholder for Twitter API - currently facing CORS display issue because of development environment
+            <div class="card-media-block" *ngFor="let post of reddits.articles; let i=index">
+              <img src="{{ post.urlToImage }}" class="card-media-image">
+              <div class="card-media-description">
+                <span class="card-media-text">
+                  <a href="{{ post.url }}">
+                  {{ post.title }}
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -159,6 +166,28 @@
             <div class="card-media-description">
               <span class="card-media-text" style="font-size: 12px;">
                 <strong>Julien Radliff</strong> replied to your <a href="#">post</a>.
+              </span>
+              <span class="card-media-text" style="font-size: 12px;">
+                20 minutes ago
+              </span>
+            </div>
+          </div>
+          <div class="card-media-block">
+            <img src="../../../img/noun_927364_cc.svg" class="card-media-image" style="border-radius: 50%;" height=25 width=25>
+            <div class="card-media-description">
+              <span class="card-media-text" style="font-size: 12px;">
+                <strong>Jackson Oer</strong> commented on your recent <a href="#">post</a>.
+              </span>
+              <span class="card-media-text" style="font-size: 12px;">
+                20 minutes ago
+              </span>
+            </div>
+          </div>
+          <div class="card-media-block">
+            <img src="../../../img/noun_922823_cc.svg" class="card-media-image" style="border-radius: 50%;" height=25 width=25>
+            <div class="card-media-description">
+              <span class="card-media-text" style="font-size: 12px;">
+                <strong>Jay Darton</strong> mentioned you on <a href="#">Marshmellow candy</a>.
               </span>
               <span class="card-media-text" style="font-size: 12px;">
                 20 minutes ago

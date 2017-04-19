@@ -3,6 +3,7 @@ import { TwitterModel } from '../../models/twitter.model';
 import { TwitterService } from '../../services/twitter.service';
 //import { InboxService } from '../../services/inbox.service';
 import { InboxModel } from '../../models/inbox.model';
+import { RedditService } from '../../services/reddit.service';
 
 //declare var moment: any;
 
@@ -21,14 +22,17 @@ export class SocialComponent implements OnInit {
   //public mostRecentTime: Date = moment().format();
   protected tweets: any = [];
   protected twitterModel: TwitterModel = new TwitterModel();
+  private subReddit: any;
+  protected reddits: any = [];
 
   constructor(
-    private twitterService: TwitterService) {}
+    private twitterService: TwitterService, private redditService: RedditService) {}
 
 
   ngOnInit() {
     this.getHomeTimeline();
     //this.loadInboxMessages();
+    this.loadRedditEntrepreneurPosts();
   }
 
   loadInboxMessages() {
@@ -50,6 +54,13 @@ export class SocialComponent implements OnInit {
       }).subscribe((res) => {
         this.result = res.json().map(tweet => tweet.text);
       });
+  }
+
+  loadRedditEntrepreneurPosts() {
+    this.subReddit = this.redditService.getRedditPosts().subscribe(res => {
+      this.reddits = res;
+      console.log(this.reddits);
+    })
   }
 
 }
