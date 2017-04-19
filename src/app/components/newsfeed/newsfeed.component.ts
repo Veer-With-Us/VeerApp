@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsApiService } from './news-api.service';
+import { BloombergService } from '../../services/bloomberg.service';
 
 @Component({
   selector: `veer-newsfeed`,
@@ -10,10 +11,15 @@ import { NewsApiService } from './news-api.service';
 export class NewsfeedComponent implements OnInit {
   private subNews: any; 
   protected news: any = [];
-  constructor(private newsAPIService: NewsApiService) {}
+  private subHeadlines: any;
+  protected headlines: any = [];
+  constructor(
+    private newsAPIService: NewsApiService,
+    private bloombergService: BloombergService) {}
 
   ngOnInit() {
     this.loadNews();
+    this.loadBusinessInsiderHeadlines();
   } 
 
   private loadNews() {
@@ -21,5 +27,12 @@ export class NewsfeedComponent implements OnInit {
       this.news = res;
       console.log(this.news);
     });
+  }
+
+  private loadBusinessInsiderHeadlines() {
+    this.subHeadlines = this.bloombergService.getBloombergHeadlines().subscribe(res => {
+      this.headlines = res;
+      console.log(this.headlines);
+    })
   }
 }

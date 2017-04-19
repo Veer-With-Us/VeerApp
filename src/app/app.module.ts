@@ -18,6 +18,7 @@ import { OAuthService } from './services/oauth.service';
 import { AuthorizedRequestService } from './services/authorized-request.service';
 import { TwitterService } from './services/twitter.service';
 import { InboxService } from './services/inbox.service';
+import { BloombergService } from './services/bloomberg.service';
 
 import { MaxLengthPipe } from './pipes/max-length.pipe';
 
@@ -47,7 +48,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     OAuthService,
     AuthorizedRequestService,
     TwitterService,
-    InboxService
+    InboxService,
+    BloombergService
   ],
   bootstrap: [AppComponent]
 })
