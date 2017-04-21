@@ -5,7 +5,6 @@ import '@angular/core';
 import '@angular/common';
 import '@angular/http';
 import '@angular/router';
-
 import 'rxjs';
 import '@angularclass/hmr';
 
@@ -23,6 +22,8 @@ import 'clarity-icons';
 import 'clarity-angular';
 import 'jssha';
 import 'moment/min/moment.min.js';
+import 'angular2-modal';
+import 'angular2-modal/plugins/bootstrap';
 
 // Import css
 

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { Overlay } from 'angular2-modal';
+import { Modal } from 'angular2-modal/plugins/bootstrap';
 import { TwitterModel } from '../../models/twitter.model';
 import { TwitterService } from '../../services/twitter.service';
 //import { InboxService } from '../../services/inbox.service';
@@ -26,7 +28,13 @@ export class SocialComponent implements OnInit {
   protected reddits: any = [];
 
   constructor(
-    private twitterService: TwitterService, private redditService: RedditService) {}
+    private twitterService: TwitterService,
+    private redditService: RedditService,
+    overlay: Overlay,
+    vcRef: ViewContainerRef,
+    public modal: Modal) {
+      overlay.defaultViewContainer = vcRef;
+    }
 
 
   ngOnInit() {
@@ -62,5 +70,18 @@ export class SocialComponent implements OnInit {
       console.log(this.reddits);
     })
   }
+
+  openModal() {
+    this.modal.alert()
+      .size('lg')
+      .showClose(true)
+      .title('Compose Message')
+      .body('')
+      .open();
+  }
+
+  closeModall() {
+    //
+  }  
 
 }
