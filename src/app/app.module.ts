@@ -1,5 +1,6 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClarityModule } from 'clarity-angular';
@@ -37,6 +38,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     ClarityModule.forRoot(),
     ModalModule.forRoot(),
     BootstrapModalModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
     routing
   ],
   declarations: [
