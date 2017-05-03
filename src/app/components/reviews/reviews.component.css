@@ -1,0 +1,28 @@
+.header-background {
+  background-color: #3C404B;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.card-body-background {
+  background-color: #7AC0CA;
+  text-align: center;
+}
+
+.average-review-text {
+  font-weight: 600;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.total-reviews-text {
+  font-weight: 600;
+  font-size: 30px;
+  color: #F5D43F; 
+}

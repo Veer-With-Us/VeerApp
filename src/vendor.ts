@@ -20,11 +20,17 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import 'mutationobserver-shim/dist/mutationobserver.min.js';
 import '@webcomponents/custom-elements/custom-elements.min.js';
 import 'clarity-icons';
+import 'clarity-icons/shapes/social-shapes';
+import 'clarity-icons/shapes/essential-shapes';
 import 'clarity-angular';
 import 'jssha';
 import 'moment/min/moment.min.js';
 import 'angular2-modal';
 import 'angular2-modal/plugins/bootstrap';
+import 'chart.js';
+import 'ng2-charts';
+import 'moment';
+import 'angular-calendar';
 
 // Import css
 
@@ -32,3 +38,4 @@ import 'angular2-modal/plugins/bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'clarity-ui/clarity-ui.min.css';
 import 'clarity-icons/clarity-icons.min.css';
+import 'angular-calendar/dist/css/angular-calendar.css';

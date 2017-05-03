@@ -6,6 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClarityModule } from 'clarity-angular';
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
+import { ChartsModule } from 'ng2-charts';
+import { CalendarModule } from 'angular-calendar';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
@@ -14,6 +16,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { SocialComponent } from './components/social/social.component';
 import { NewsfeedComponent } from './components/newsfeed/newsfeed.component';
 import { ComposeComponent } from './components/social/compose.component';
+import { SellComponent } from './components/sell/sell.component';
+import { BarChartComponent } from './components/charts/bar-chart.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
+import { CustomerTableComponent } from './components/customers/customers.component';
+import { SalesActivityComponent } from './components/sales-activity/sales-activity.component';
 import { routing } from './app.routing';
 
 import { NewsApiService } from './components/newsfeed/news-api.service';
@@ -24,8 +32,12 @@ import { TwitterService } from './services/twitter.service';
 import { InboxService } from './services/inbox.service';
 import { BloombergService } from './services/bloomberg.service';
 import { RedditService } from './services/reddit.service';
+import { CustomerFeedbackService } from './services/customer-feedback.service';
+import { CustomerDataService } from './services/customer-data.service';
+import { SalesActivityService } from './services/sales-activity.service';
 
 import { MaxLengthPipe } from './pipes/max-length.pipe';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
@@ -40,6 +52,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     BootstrapModalModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
+    ChartsModule,
+    CalendarModule.forRoot(),
     routing
   ],
   declarations: [
@@ -50,7 +64,14 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     SocialComponent,
     NewsfeedComponent,
     MaxLengthPipe,
-    ComposeComponent
+    ComposeComponent,
+    SellComponent,
+    BarChartComponent,
+    CalendarComponent,
+    ReviewsComponent,
+    CustomerTableComponent,
+    SalesActivityComponent,
+    CapitalizePipe
   ],
   providers: [
     NewsApiService,
@@ -60,7 +81,10 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     TwitterService,
     InboxService,
     BloombergService,
-    RedditService
+    RedditService,
+    CustomerFeedbackService,
+    CustomerDataService,
+    SalesActivityService
   ],
   bootstrap: [AppComponent]
 })
