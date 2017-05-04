@@ -73,10 +73,10 @@ var transactions =[
     item: 'Strawberry Lemonade',
     quantitySold: 2,
     revenue: 5.00,
-    date: '04/31/2017',
+    date: '04/30/2017',
     transactionType: 'cash'
-  }
-  /*{
+  },
+  {
     transactionId: 7,
     name: 'Russell Alvarado',
     item: 'Regular Lemonade',
@@ -93,5 +93,5 @@ var transactions =[
     revenue: 3.50,
     date: '04/30/2017',
     transactionType: 'debit'
-  }*/
+  }
 ]

@@ -22,6 +22,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { CustomerTableComponent } from './components/customers/customers.component';
 import { SalesActivityComponent } from './components/sales-activity/sales-activity.component';
+import { GoLiveComponent } from './components/go-live/go-live.component';
 import { routing } from './app.routing';
 
 import { NewsApiService } from './components/newsfeed/news-api.service';
@@ -71,6 +72,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     ReviewsComponent,
     CustomerTableComponent,
     SalesActivityComponent,
+    GoLiveComponent,
     CapitalizePipe
   ],
   providers: [
