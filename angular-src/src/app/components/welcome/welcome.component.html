@@ -1,0 +1,27 @@
+<div class="welcome-background">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <form class="form" [formGroup]="userLoginForm" (ngSubmit)="onSubmit()" [hidden]="submitted">
+        <section class="form-block">
+          <label style="color: #ffffff; font-weight: 500;">Login</label>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <label for="username" aria-haspopup="true" role="tooltip" class="tooltip-validation tooltip-sm" [class.invalid]="userLoginForm.get('username').invalid && (userLoginForm.get('username').dirty || userLoginForm.get('username').touched)">
+        <input id="username" type="text" formControlName="username" placeholder="Username">
+        <span class="tooltip-content" *ngIf="userLoginForm.get('username').invalid && (userLoginForm.get('username').dirty || userLoginForm.get('username').touched)">Username is required.</span>
+      </label>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <label for="password" aria-haspopup="true" role="tooltip" class="tooltip-validation tooltip-sm" [class.invalid]="userLoginForm.get('password').invalid && (userLoginForm.get('password').dirty || userLoginForm.get('password').touched)">
+        <input id="password" type="text" formControlName="password" placeholder="Password">
+        <span class="tooltip-content" *ngIf="userLoginForm.get('password').invalid && (userLoginForm.get('password').dirty || userLoginForm.get('password').touched)">Password is required.</span>
+      </label>
+          </div>
+        </section>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

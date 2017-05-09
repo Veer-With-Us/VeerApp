@@ -1,19 +1,22 @@
-# VeerApp
+# VeerStack
 
-To run the VeerApp, 
+Complete full-stack architecture for the Veer application
 
-Clone the repository by running:
+### Version
+1.0.0
 
-git clone https://github.com/Veer-With-Us/VeerApp.git
-
-
-
-Then, install dependencies with npm:
-
-npm install
+## Usage
 
 
+### Installation
 
-Finally, start the server:
+Install the dependencies
 
-npm start
+```sh
+$ npm install
+```
+Run app
+
+```sh
+$ npm start
+```
