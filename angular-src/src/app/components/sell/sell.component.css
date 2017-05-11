@@ -86,3 +86,7 @@
   /*text-align: center;*/
 }
 
+#add-inventory:hover {
+  cursor: pointer;
+}
+

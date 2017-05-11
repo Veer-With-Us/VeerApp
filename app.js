@@ -26,7 +26,7 @@ mongoose.connection.on('error', (err) => {
 const app = express();
 const users = require('./routes/users');
 const customers = require('./routes/customers');
-const inventories = require('./routes/inventories');
+const inventory = require('./routes/inventory');
 
 
 // Port number
@@ -53,7 +53,7 @@ require('./config/passport')(passport);
 
 app.use('/users', users);
 app.use('/customers', customers);
-app.use('/inventories', inventories);
+app.use('/inventory', inventory);
 
 
 // Index route

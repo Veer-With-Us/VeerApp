@@ -37,6 +37,7 @@ import { RedditService } from './services/reddit.service';
 import { CustomerFeedbackService } from './services/customer-feedback.service';
 import { CustomerDataService } from './services/customer-data.service';
 import { SalesActivityService } from './services/sales-activity.service';
+import { InventoryService } from './services/inventory.service';
 
 import { MaxLengthPipe } from './pipes/max-length.pipe';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
@@ -88,6 +89,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     CustomerFeedbackService,
     CustomerDataService,
     SalesActivityService,
+    InventoryService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]

@@ -37,13 +37,64 @@
               <td class="inventory-item">{{ homemadeCookies | currency:'USD':true:'1.2-2' }}</td>
             </tr>
             <tr>
-              <td><clr-icon shape="plus-circle" class="is-inverse" size="48"></clr-icon></td>
+              <td>
+                <clr-icon id="add-inventory" shape="plus-circle" class="is-inverse" size="48" (click)="opened = true"></clr-icon>
+              </td>
               <td class="new-item">Add New Item</td>
               <td></td>
             </tr>
           </tbody>
         </table>
       </div>
+      <clr-modal [(clrModalOpen)]="opened">
+        <h3 class="modal-title">Add Product to Inventory</h3>
+        <div class="modal-body">
+          <form class="form" [formGroup]="productInventoryForm" (ngSubmit)="onSubmit()">
+            <section class="form-block">
+              <div class="form-group form-group-spacing">
+                <label class="required" for="productId">Product ID: </label>
+                <label for="productId" aria-haspopup="true" role="tooltip" class="tooltip-validation tooltip-sm" [class.invalid]="productInventoryForm.get('productId').invalid && (productInventoryForm.get('productId').dirty || productInventoryForm.get('productId').touched)">
+                  <input id="productId" type="text" formControlName="productId" placeholder="ex: 001">
+                  <div class="tooltip-content" *ngIf="productInventoryForm.get('productId').invalid && (productInventoryForm.get('productId').dirty || productInventoryForm.get('productId').touched)">
+                    A unique identifier including numbers or letters for your product is required
+                  </div>
+                </label>
+              </div>
+              <div class="form-group form-group-spacing">
+                <label class="required" for="productName">Product Name: </label>
+                <label for="productName" aria-haspopup="true" role="tooltip" class="tooltip-validation tooltip-sm" [class.invalid]="productInventoryForm.get('productName').invalid && (productInventoryForm.get('productName').dirty || productInventoryForm.get('productName').touched)">
+                  <input id="productName" type="text" formControlName="productName" placeholder="ex: Apple Juice">
+                  <div class="tooltip-content" *ngIf="productInventoryForm.get('productName').invalid && (productInventoryForm.get('productName').dirty || productInventoryForm.get('productName').touched)">
+                    Product name is required.
+                  </div>
+                </label>
+              </div>
+              <div class="form-group form-group-spacing">
+                <label class="required" for="unitPrice">Product Price: </label>
+                <label for="unitPrice" aria-haspopup="true" role="tooltip" class="tooltip-validation tooltip-sm" [class.invalid]="productInventoryForm.get('unitPrice').invalid && (productInventoryForm.get('unitPrice').dirty || productInventoryForm.get('unitPrice').touched)">
+                  <input id="unitPrice" type="number" min="0" max="999999999" formControlName="unitPrice" placeholder="ex: $2">
+                  <div class="tooltip-content" *ngIf="productInventoryForm.get('unitPrice').invalid && (productInventoryForm.get('unitPrice').dirty || productInventoryForm.get('unitPrice').touched)">
+                    How much will you sell this item for?
+                  </div>
+                </label>
+              </div>
+              <div class="form-group form-group-spacing">
+                <label class="required" for="itemQuantity">Quantity of Product: </label>
+                <label for="itemQuantity" aria-haspopup="true" role="tooltip" class="tooltip-validation tooltip-sm" [class.invalid]="productInventoryForm.get('itemQuantity').invalid && (productInventoryForm.get('itemQuantity').dirty || productInventoryForm.get('itemQuantity').touched)">
+                  <input id="itemQuantity" type="number" min="0" max="999999999" formControlName="itemQuantity" placeholder="ex: 100">
+                  <div class="tooltip-content" *ngIf="productInventoryForm.get('itemQuantity').invalid && (productInventoryForm.get('itemQuantity').dirty || productInventoryForm.get('itemQuantity').touched)">
+                    How many of these items do you have?
+                  </div>
+                </label>
+              </div>
+              <button class="btn btn-success submit-button" type="submit">Add</button>
+            </section>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" (click)="onCloseInventory()">Cancel</button>
+        </div>
+      </clr-modal>
       <div class="col-lg-7">
         <a href="#" class="card clickable">
           <div class="customer-feedback-card">
@@ -56,10 +107,10 @@
           </div>
         </a>
         <!--<div class="card">-->
-          <!--<div class="card-header">
+        <!--<div class="card-header">
             Latest Activity Placeholder
           </div>-->
-          <!--<div class="card-block">
+        <!--<div class="card-block">
             <div class="card-title">
               Block
             </div>
@@ -67,14 +118,14 @@
               ...
             </div>
           </div>-->
-          <!--<div class="card-footer">
+        <!--<div class="card-footer">
             <button class="btn btn-sm btn-link">Footer Action 1</button>
             <button class="btn btn-sm btn-link">Footer Action 2</button>
           </div>-->
-          <veer-sales-activity></veer-sales-activity>
+        <veer-sales-activity></veer-sales-activity>
         <!--</div>-->
       </div>
-        <veer-bar-chart></veer-bar-chart>
+      <veer-bar-chart></veer-bar-chart>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
       <div class="card right-side-panel">
