@@ -20,6 +20,7 @@ router.post('/add', (req, res, next) => {
       res.json({success: false, msg: 'Failed to add product to inventory'});
     } else {
       res.json({success: true, msg: 'Product added to inventory'});
+      newInventory.save();
     }
   });
 });

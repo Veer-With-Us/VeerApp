@@ -91,6 +91,24 @@
             </section>
           </form>
         </div>
+        <div [hidden]="inventorySuccessAlert == false">
+          <clr-alert [clrAlertType]="'alert-success'">
+            <div class="alert-item">
+              <span class="alert-text">
+                      Nice! You've successfully added your item to your inventory.
+                  </span>
+            </div>
+          </clr-alert>
+        </div>
+        <div [hidden]="inventoryFailureAlert == false">
+          <clr-alert [clrAlertType]="'alert-danger'">
+            <div class="alert-item">
+              <span class="alert-text">
+                      Oops! Failed to add item to your inventory.
+                  </span>
+            </div>
+          </clr-alert>
+        </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline" (click)="onCloseInventory()">Cancel</button>
         </div>

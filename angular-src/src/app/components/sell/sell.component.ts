@@ -17,6 +17,8 @@ export class SellComponent implements OnInit {
   homemadeCookies = 0.75;
   feedback: Feedback[];
   opened: Boolean = false;
+  inventorySuccessAlert: Boolean = false;
+  inventoryFailureAlert: Boolean = false;
 
   public inventoryModel: InventoryModel = new InventoryModel();
 
@@ -54,9 +56,11 @@ export class SellComponent implements OnInit {
   addInventoryToDatabase() {
     this.inventoryService.postInventory(this.inventoryModel).subscribe(data => {
       if (data.success) {
-        console.log('addInventoryToDatabase() success: Successfully added inventory to database')
+        console.log('addInventoryToDatabase() success: Successfully added inventory to database');
+        this.inventorySuccessAlert = true;
       } else {
-        console.log('addInventoryToDatabase() failed: Failed to add inventory to database')
+        console.log('addInventoryToDatabase() failed: Failed to add inventory to database');
+        this.inventoryFailureAlert = true;
       }
     });
   }
