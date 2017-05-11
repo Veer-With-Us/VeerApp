@@ -91,7 +91,7 @@
             </section>
           </form>
         </div>
-        <div [hidden]="inventorySuccessAlert == false">
+        <div *ngIf="inventorySuccessAlert">
           <clr-alert [clrAlertType]="'alert-success'">
             <div class="alert-item">
               <span class="alert-text">
@@ -100,7 +100,7 @@
             </div>
           </clr-alert>
         </div>
-        <div [hidden]="inventoryFailureAlert == false">
+        <div *ngIf="inventoryFailureAlert">
           <clr-alert [clrAlertType]="'alert-danger'">
             <div class="alert-item">
               <span class="alert-text">
