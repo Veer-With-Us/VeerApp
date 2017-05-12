@@ -24,6 +24,8 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
 import { CustomerTableComponent } from './components/customers/customers.component';
 import { SalesActivityComponent } from './components/sales-activity/sales-activity.component';
 import { GoLiveComponent } from './components/go-live/go-live.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 import { routing } from './app.routing';
 
 import { NewsApiService } from './components/newsfeed/news-api.service';
@@ -38,6 +40,9 @@ import { CustomerFeedbackService } from './services/customer-feedback.service';
 import { CustomerDataService } from './services/customer-data.service';
 import { SalesActivityService } from './services/sales-activity.service';
 import { InventoryService } from './services/inventory.service';
+import { MessageService } from './services/message.service';
+import { ValidateService } from './services/validate.service';
+import { AuthService } from './services/auth.service';
 
 import { MaxLengthPipe } from './pipes/max-length.pipe';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
@@ -75,6 +80,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     CustomerTableComponent,
     SalesActivityComponent,
     GoLiveComponent,
+    LoginComponent,
+    RegisterComponent,
     CapitalizePipe
   ],
   providers: [
@@ -90,6 +97,9 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     CustomerDataService,
     SalesActivityService,
     InventoryService,
+    MessageService,
+    ValidateService,
+    AuthService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]

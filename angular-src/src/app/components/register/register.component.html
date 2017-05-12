@@ -1,0 +1,31 @@
+<div class="login-wrapper">
+  <form class="login" (submit)="onRegisterSubmit()">
+    <label class="title">
+            Register to Veer
+        </label>
+    <div class="login-group form-group">
+      <!--<div class="auth-source select">
+        <select id="login-auth-source-1">
+                    <option>Local Users</option>
+                    <option>Administrator</option>
+                </select>
+      </div>-->
+      <input class="username form-control" [(ngModel)]="firstName" name="firstName" type="text" id="register_firstName" placeholder="First Name" required>
+      <input class="username form-control" [(ngModel)]="lastName" name="lastName" type="text" id="register_lastName" placeholder="Last Name" required>
+      <input class="username form-control" [(ngModel)]="email" name="email" type="text" id="register_email" placeholder="Email Address" required>
+      <input class="username form-control" [(ngModel)]="username" name="username" type="text" id="register_username" placeholder="Username" required>
+      <input class="password form-control" [(ngModel)]="password" name="password" type="password" id="register_password" placeholder="Password" required>
+      <div class="checkbox">
+        <input type="checkbox" id="rememberme">
+        <label for="rememberme">
+                    Remember me
+                </label>
+      </div>
+      <!--<div class="error">
+        Invalid user name or password
+      </div>-->
+      <button type="submit" class="btn btn-primary">REGISTER</button>
+      <a href="#" class="signup">Already have an account? Sign in here!</a>
+    </div>
+  </form>
+</div>

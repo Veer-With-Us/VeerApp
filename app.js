@@ -27,6 +27,7 @@ const app = express();
 const users = require('./routes/users');
 const customers = require('./routes/customers');
 const inventory = require('./routes/inventory');
+const messages = require('./routes/messages');
 
 
 // Port number
@@ -54,6 +55,7 @@ require('./config/passport')(passport);
 app.use('/users', users);
 app.use('/customers', customers);
 app.use('/inventory', inventory);
+app.use('/messages', messages);
 
 
 // Index route

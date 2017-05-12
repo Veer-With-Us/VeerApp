@@ -56,11 +56,11 @@ export class SellComponent implements OnInit {
   addInventoryToDatabase() {
     this.inventoryService.postInventory(this.inventoryModel).subscribe(data => {
       if (data.success) {
-        console.log('addInventoryToDatabase() success: Successfully added inventory to database');
         this.inventorySuccessAlert = true;
+        console.log('addInventoryToDatabase() success: Successfully added inventory to database');
       } else {
-        console.log('addInventoryToDatabase() failed: Failed to add inventory to database');
         this.inventoryFailureAlert = true;
+        console.log('addInventoryToDatabase() failed: Failed to add inventory to database');
       }
     });
   }

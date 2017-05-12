@@ -31,6 +31,7 @@ import 'chart.js';
 import 'ng2-charts';
 import 'moment';
 import 'angular-calendar';
+import 'angular2-jwt';
 
 // Import css
 

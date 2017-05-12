@@ -1,7 +1,9 @@
 <div class="main-container">
     <header class="header header-6 header-background">
         <div class="branding">
-            <img src="../../../img/Main-Icon-V1.png" class="logo-spacing" height=70 width=70>
+            <a routerLink="home" class="nav-link" style="color: #FFFFFF; padding: 0;">
+                <img src="../../../img/Main-Icon-V1.png" class="logo-spacing" height=70 width=70>
+            </a>
         </div>
         <div class="header-nav">
             <a href="#" class="nav-link nav-icon">
@@ -19,18 +21,18 @@
                 <input id="search_input" type="text" placeholder="Type here for search">
             </label>
         </form>
-        <!--<div class="header-actions">
+        <div class="header-actions">
             <clr-dropdown clrMenuPosition="bottom-right">
                 <button class="nav-text" clrDropdownToggle>
                 {{ userEmailAddress }}
                 <clr-icon shape="caret down"></clr-icon>
             </button>
                 <clr-dropdown-menu>
-                    <a href="..." clrDropdownItem>Preferences</a>
-                    <a href="..." clrDropdownItem>Log out</a>
+                    <a href="#" clrDropdownItem>Preferences</a>
+                    <a routerLink="login" clrDropdownItem>Log out</a>
                 </clr-dropdown-menu>
             </clr-dropdown>
-        </div>-->
+        </div>
     </header>
     <div class="content-container">
         <div class="content-area">
@@ -62,7 +64,7 @@
                     </div>
                     Social
                 </a>
-                <a href="#" class="nav-link" style="color: #FFFFFF; padding: 0;">
+                <a routerLink="/go-live" class="nav-link" style="color: #FFFFFF; padding: 0;">
                     <div>
                         <img src="../../../img/noun_708687_cc.svg" height=50 width=50>
                     </div>
