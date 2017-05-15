@@ -31,6 +31,17 @@
   text-align: center;
 }
 
+.live-price-text {
+  color: #2C85A2;
+  text-align: center;
+  font-size: 18px;
+}
+
 .live-item-image {
   border-radius: 6px;
+}
+
+.checkout-text {
+  color: #2C85A2;
+  text-align: center;
 }

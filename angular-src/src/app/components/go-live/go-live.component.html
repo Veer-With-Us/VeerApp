@@ -21,12 +21,12 @@
             <div class="card-text" style="text-align: center;">
               <img class="live-item-image" src="../../../img/lemonade-image.jpeg" height=200 width=200>
             </div>
-            <div class="card-text live-item-text">
-              {{ lemonadePrice  | currency:'USD':true:'1.2-2' }}
+            <div class="card-text live-price-text">
+              {{ lemonadePrice | currency:'USD':true:'1.2-2' }}
             </div>
           </div>
           <div class="card-footer" style="text-align: center;">
-            <button type="submit" class="btn btn-info-outline">Add</button>
+            <button type="submit" class="btn btn-info-outline" (click)="lemonadeAddToCart()">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -42,12 +42,12 @@
             <div class="card-text" style="text-align: center;">
               <img class="live-item-image" src="../../../img/strawberry-lemonade-thumb.jpg" height=200 width=200>
             </div>
-            <div class="card-text live-item-text">
-              {{ strawberryLemonadePrice  | currency:'USD':true:'1.2-2' }}
+            <div class="card-text live-price-text">
+              {{ strawberryLemonadePrice | currency:'USD':true:'1.2-2' }}
             </div>
           </div>
           <div class="card-footer" style="text-align: center;">
-            <button type="submit" class="btn btn-info-outline">Add</button>
+            <button type="submit" class="btn btn-info-outline" (click)="strawberryAddToCart()">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -63,15 +63,39 @@
             <div class="card-text" style="text-align: center;">
               <img class="live-item-image" src="../../../img/chocolate-chip.jpg" height=200 width=200>
             </div>
-            <div class="card-text live-item-text">
-              {{ homemadeCookiesPrice  | currency:'USD':true:'1.2-2' }}
+            <div class="card-text live-price-text">
+              {{ homemadeCookiesPrice | currency:'USD':true:'1.2-2' }}
             </div>
           </div>
           <div class="card-footer" style="text-align: center;">
-            <button type="submit" class="btn btn-info-outline">Add</button>
+            <button type="submit" class="btn btn-info-outline" (click)="cookieAddToCart()">Add to Cart</button>
           </div>
         </div>
       </div>
+    </div>
+    <div class="row" [hidden]="!addedToCart">
+      <div class="col-lg-4"></div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+        <div class="card item-card-background" style="margin-bottom: 10%;">
+          <div class="card-header live-item-text">
+            Order Summary
+          </div>
+          <div class="card-block">
+            <div class="card-text checkout-text">
+              <span>Items Selected: </span>
+              <span style="font-weight: 500">{{ ordersModel.itemsAdded }}</span>
+            </div>
+            <div class="card-text checkout-text">
+              <span>Subtotal: </span>
+              <span style="font-weight: 500">{{ ordersModel.subTotal | currency:'USD':true:'1.2-2' }}</span>
+            </div>
+          </div>
+          <div class="card-footer" style="text-align: center;">
+            <button type="submit" class="btn btn-success">Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4"></div>
     </div>
   </div>
 </div>
