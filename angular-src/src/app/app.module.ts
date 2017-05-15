@@ -26,6 +26,7 @@ import { SalesActivityComponent } from './components/sales-activity/sales-activi
 import { GoLiveComponent } from './components/go-live/go-live.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { HomeComponent } from './components/home/home.component';
 import { routing } from './app.routing';
 
 import { NewsApiService } from './components/newsfeed/news-api.service';
@@ -82,6 +83,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     GoLiveComponent,
     LoginComponent,
     RegisterComponent,
+    HomeComponent,
     CapitalizePipe
   ],
   providers: [

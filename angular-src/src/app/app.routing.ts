@@ -8,15 +8,17 @@ import { SellComponent } from './components/sell/sell.component';
 import { GoLiveComponent } from './components/go-live/go-live.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+/*import { HomeComponent } from './components/home/home.component';*/
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
   { path: 'home', component: NewsfeedComponent },
+  { path: 'newsfeed', component: NewsfeedComponent },
   /*{ path: 'social', component: SocialComponent }*/
   { path: 'social', component: SocialComponent },
   { path: 'sell', component: SellComponent },
   { path: 'go-live', component: GoLiveComponent },
-  { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent }
 ];
 
